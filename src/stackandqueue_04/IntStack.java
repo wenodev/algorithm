@@ -46,27 +46,27 @@ public class IntStack{
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ë°ì´í„° ê°¯ìˆ˜ ì…ë ¥: "); int num = sc.nextInt();
+		System.out.print("µ¥ÀÌÅÍ »çÀÌÁî: "); int num = sc.nextInt();
 		IntStack s = new IntStack(num);
 		
 		while(true) {
 			int x;
-			System.out.print("[1]í‘¸ì‹œ [2]íŒ [3]í™•ì¸ [4]ì¢…ë£Œ: "); int menu = sc.nextInt();
+			System.out.print("[1]Çª½Ã [2]ÆË [3]È®ÀÎ[4]Á¾·á: "); int menu = sc.nextInt();
 			
 			switch(menu) {
 			case 1:
-				System.out.print("pushí•  ë°ì´í„° ì…ë ¥: "); x = sc.nextInt();
+				System.out.print("pushÇÒ µ¥ÀÌÅÍ: "); x = sc.nextInt();
 				try {
 					s.push(x);
 				}catch(OverflowIntStackException e){
-					System.out.println("ìŠ¤íƒì´ ë‹¤ ì°¼ìŠµë‹ˆë‹¤.");
+					System.out.println("½ºÅÃÀÌ ´Ù Ã£½À´Ï´Ù..");
 				}
 				break;
 			case 2:
 				try {
 					s.pop();
 				}catch(EmptyIntStackException e) {
-					System.out.println("ìŠ¤íƒì´ ë¹„ì—ˆìŠµë‹ˆë‹¤.");
+					System.out.println("½ºÅÃÀÌ ºñ¾îÀÖ½À´Ï´Ù.");
 				}
 				break;
 			case 3:
@@ -74,7 +74,7 @@ public class IntStack{
 				break;
 			}
 			if(menu == 4) {
-				System.out.println("í”„ë¦°íŠ¸ë¥¼ ì¢…ë£Œ í•©ë‹ˆë‹¤.");
+				System.out.println("ÇÁ·Î±×·¥ Á¾·á.");
 				break;
 			}
 		}

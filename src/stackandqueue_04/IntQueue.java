@@ -27,7 +27,7 @@ public class IntQueue {
 		if(num >= max) {
 			throw new OverflowIntQueueException();
 		}
-		rear++;
+		queue[rear++] = x;
 		num++;
 		if(rear==max) rear = 0;
 	}
@@ -50,15 +50,15 @@ public class IntQueue {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ì´ ë°ì´í„° í¬ê¸° : "); int size = sc.nextInt();
+		System.out.print("Å¥ µ¥ÀÌÅÍ Å©±â : "); int size = sc.nextInt();
 		IntQueue que = new IntQueue(size);
-		System.out.print("[1]ì¸í [2]ë””í [3]ë³´ê¸° [4]ì¢…ë£Œ : "); int menu = sc.nextInt();
 		
 		while(true) {
+			System.out.print("[1]»ğÀÔ [2]»èÁ¦[3]È®ÀÎ [4]Á¾·á : "); int menu = sc.nextInt();
 			int x;
 			switch(menu) {
 			case 1:
-				System.out.print("ì…ë ¥í•  ë°ì´í„° : "); x = sc.nextInt();
+				System.out.print("ÀÔ·ÂÇÒ µ¥ÀÌÅÍ: "); x = sc.nextInt();
 				que.enqueue(x);
 				break;
 			case 2:
@@ -69,7 +69,7 @@ public class IntQueue {
 				break;
 			}
 			if(menu==4) {
-				System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
+				System.out.println("ÇÁ·Î±×·¥ Á¾·á");
 				break;
 			}	
 		}
